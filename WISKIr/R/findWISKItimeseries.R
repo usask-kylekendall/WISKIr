@@ -1,7 +1,7 @@
 #' Find all timeseries on WISKI web server for a specified station
 #' @description Queries a WISKI web server to get a list of available time series which have the specified station name.
 #' @param stationName Required. A character string containing the name of the station. May contain wildcard characters.
-#' @param site.url Optional. A character string containing the url of the WISKI web server. Defaults to the Global Institute for Water Security (GIWS) server: \code{'http://giws.usask.ca:8080/'}. As this package is intended for use by the GIWS hydrological community, it is usually unnecessary to specify the web server.
+#' @param site.url Optional. A character string containing the url of the WISKI web server. Defaults to the Global Institute for Water Security (GIWS) server: \code{'https://giws1.usask.ca/'}. As this package is intended for use by the GIWS hydrological community, it is usually unnecessary to specify the web server.
 #' @return If unsuccessful, returns \code{FALSE}. If successful, returns a dataframe containing 
 #' \item{station_name}{Name of station, specified by \code{stationName}} 
 #' \item{station_no}{WISKI number of station} 
@@ -19,7 +19,7 @@
 #' print(FiseraTimeseries)
 #' @export
 
-findWISKItimeseries <- function(stationName, site.url='http://giws.usask.ca:8080/'){
+findWISKItimeseries <- function(stationName, site.url='https://giws1.usask.ca/'){
   # finds all time series for a given station - station name can include wild cards
   # returns data frame containing all available time series
   stock <- 'KiWIS/KiWIS?service=kisters&type=queryServices&request=getTimeseriesList&datasource=0&format=ascii&station_name='
