@@ -1,7 +1,7 @@
 #' Gets metadata of a WISKI time series
 #' @description Returns metadata of a specified time series.
 #' @param timeSeries Required. Character string containing the WISKI time series ID number, which is returned by \code{findWISKItimeseries}. Cannot contain wild card characters.
-#' @param site.url Optional. A character string containing the url of the WISKI web server. Defaults to the Global Institute for Water Security (GIWS) server: \code{'http://giws.usask.ca:8080/'}. As this package is intended for use by the GIWS hydrological community, it is usually unnecessary to specify the web server.
+#' @param site.url Optional. A character string containing the url of the WISKI web server. Defaults to the Global Institute for Water Security (GIWS) server: \code{'https://giws1.usask.ca/'}. As this package is intended for use by the GIWS hydrological community, it is usually unnecessary to specify the web server.
 #' @return If unsucessful, returns \code{FALSE}. If successful, returns a dataframe containing the metadata of the specified time series.
 #' @author Kevin Shook
 #' @seealso \code{\link{getWISKIvalues}} \code{\link{findWISKItimeseries}}
@@ -11,7 +11,7 @@
 #' print(FiseraTmetadata)
 #' @export
 
-getWISKImetadata <- function(timeSeries, site.url='http://giws.usask.ca:8080/'){
+getWISKImetadata <- function(timeSeries, site.url='https://giws1.usask.ca/'){
   # reads time series metadata from the WISKI server and returns all metadata
   stock <-'KiWIS/KiWIS?service=kisters&type=queryServices&request=getTimeseriesValues&datasource=0&format=csv&ts_id='
   
