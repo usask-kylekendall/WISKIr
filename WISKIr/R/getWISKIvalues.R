@@ -15,7 +15,7 @@
 #' @export
 
 getWISKIvalues <- function(timeSeries='', startDate='1900-01-01', 
-                                        endDate='', timezone='', site.url='http://giws.usask.ca:8080/'){
+                                        endDate='', timezone='', site.url='https://giws1.usask.ca/'){
   # reads a time series from the WISKI server and returns a dataframe
   # this version reads ASCII data
   # format for WISKI dates must be yyyy-mm-dd
