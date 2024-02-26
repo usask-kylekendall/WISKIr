@@ -1,6 +1,6 @@
 #' Finds all groups on the Wiski server
 #'
-#' @param site.url Optional. A character string containing the url of the WISKI web server. Defaults to the Global Institute for Water Security (GIWS) server: \code{'http://giws.usask.ca:8080/'}. As this package is intended for use by the GIWS hydrological community, it is usually unnecessary to specify the web server.
+#' @param site.url Optional. A character string containing the url of the WISKI web server. Defaults to the Global Institute for Water Security (GIWS) server: \code{'https://giws1.usask.ca/'}. As this package is intended for use by the GIWS hydrological community, it is usually unnecessary to specify the web server.
 #'
 #' @return If unsuccessful, returns \code{FALSE}. If successful, returns a dataframe containing \item{group_id}{ID number of the group} \item{group_name}{WISKI name of the group} \item{gorup_type}{Type of the group}
 #' @author Kevin Shook
@@ -9,7 +9,7 @@
 #'
 #' @examples
 #' groups <- findWISKIgroups()
-findWISKIgroups <- function(site.url='http://giws.usask.ca:8080/'){
+findWISKIgroups <- function(site.url='https://giws1.usask.ca/'){
   
   stock <-'KiWIS/KiWIS?service=kisters&type=queryServices&request=getGroupList&datasource=0&format=ascii'
 
